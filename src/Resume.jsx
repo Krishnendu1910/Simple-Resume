@@ -105,7 +105,7 @@ export default function Resume() {
                     href="mailto:adas34105@gmail.com"
                     className="hover:underline"
                   >
-                    krishnendusarkar1910@gmail.com
+                    krishnendu.sarkar.work@gmail.com
                   </a>
                 </div>
                 <div className="flex items-start gap-2">
