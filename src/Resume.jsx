@@ -230,8 +230,6 @@ export default function Resume() {
               <ul className="space-y-2">
                 <Bullet>
                   BEYONDMEET - An interactive 3D meeting platform.
-                </Bullet>
-                <Bullet>
                   Tech Stack : 
                   <ul>
                     <li>NextJs : To accomplish frontend and backend in a single path.</li>
