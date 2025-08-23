@@ -232,7 +232,7 @@ export default function Resume() {
                   BEYONDMEET - An interactive 3D meeting platform.
                   <br />
                   Tech Stack : 
-                  <ul>
+                  <li>
                     <li>NextJs : To accomplish frontend and backend in a single path.</li>
                     <li>Clerk : For the built in Sign in page with authectication</li>
                     <li>
@@ -241,7 +241,7 @@ export default function Resume() {
                     <li>
                         Three Js : For creating the 3D characters 
                     </li>
-                  </ul>
+                  </li>
                 </Bullet>
               </ul>
 
@@ -270,7 +270,6 @@ export default function Resume() {
 
       <p className="max-w-4xl mx-auto text-[12px] text-gray-500 mt-4 px-3 md:px-0">
         Tip: Click the Download button above to save as a high-quality A4 PDF.
-        You can tweak colors/text in the code to exactly match your brand.
       </p>
     </div>
   );
