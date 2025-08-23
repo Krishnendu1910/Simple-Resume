@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Phone, Mail, MapPin, Globe, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Globe } from "lucide-react";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
@@ -23,7 +23,6 @@ export default function Resume() {
     const el = resumeRef.current;
     if (!el) return;
 
-    // Ensure fonts are rendered
     const canvas = await html2canvas(el, {
       scale: 2,
       backgroundColor: "#ffffff",
@@ -32,7 +31,6 @@ export default function Resume() {
     });
     const imgData = canvas.toDataURL("image/png");
 
-    // A4 size in mm
     const pdf = new jsPDF({
       orientation: "portrait",
       unit: "mm",
@@ -41,7 +39,6 @@ export default function Resume() {
     const pageWidth = pdf.internal.pageSize.getWidth();
     const pageHeight = pdf.internal.pageSize.getHeight();
 
-    // Canvas size in pixels
     const imgProps = { width: canvas.width, height: canvas.height };
     const ratio = Math.min(
       pageWidth / (imgProps.width / 2),
@@ -71,28 +68,27 @@ export default function Resume() {
       <div className="max-w-4xl mx-auto shadow-xl">
         <div
           ref={resumeRef}
-          className="bg-white mx-auto"
-          style={{ width: 794, minHeight: 1123 }}
+          className="bg-white mx-auto w-full md:w-[794px] min-h-[1123px]"
         >
           {/* Top header bar */}
-          <div className="px-8 pt-8 pb-4 border-b">
-            <div className="flex items-end justify-between">
+          <div className="px-4 md:px-8 pt-6 md:pt-8 pb-4 border-b">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2">
               <div>
-                <div className="text-3xl font-extrabold tracking-wide text-gray-900">
+                <div className="text-2xl md:text-3xl font-extrabold tracking-wide text-gray-900 text-center md:text-left">
                   KRISHNENDU SARKAR
                 </div>
-                <div className="uppercase tracking-widest text-gray-600 text-sm font-semibold mt-1">
+                <div className="uppercase tracking-widest text-gray-600 text-xs md:text-sm font-semibold mt-1 text-center md:text-left">
                   FRESHER
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-12 gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
             {/* Left Column */}
-            <div className="col-span-4 border-r px-8 pt-6 pb-10">
+            <div className="md:col-span-4 border-b md:border-r md:border-b-0 px-4 md:px-8 pt-6 pb-6 md:pb-10">
               <SectionTitle>CONTACT</SectionTitle>
-              <div className="space-y-2 text-[12px]">
+              <div className="space-y-2 text-[12px] break-words">
                 <div className="flex items-start gap-2">
                   <Phone size={14} className="mt-0.5" />
                   <a href="tel:+916290421047" className="hover:underline">
@@ -124,8 +120,8 @@ export default function Resume() {
                     href="https://www.linkedin.com/in/krishnendu-sarkar-087bba257/"
                     className="hover:underline"
                   >
-                    https://www.linkedin.com/in/krishnendu-sarkar-087bba257/
-                  </a> 
+                    linkedin.com/in/krishnendu-sarkar-087bba257
+                  </a>
                 </div>
                 <div className="flex items-start gap-2 break-all">
                   <Globe size={14} className="mt-0.5" />
@@ -133,8 +129,8 @@ export default function Resume() {
                     href="https://github.com/Krishnendu1910"
                     className="hover:underline"
                   >
-                    https://github.com/Krishnendu1910
-                  </a> 
+                    github.com/Krishnendu1910
+                  </a>
                 </div>
               </div>
 
@@ -161,7 +157,7 @@ export default function Resume() {
               <SectionTitle>HOBBIES</SectionTitle>
               <ul className="space-y-2">
                 <Bullet>Playing Mobile Games.</Bullet>
-                <Bullet>Exploring UI/UX tools and learning new things. </Bullet>
+                <Bullet>Exploring UI/UX tools and learning new things.</Bullet>
                 <Bullet>Learning frontend tech stack.</Bullet>
               </ul>
 
@@ -172,103 +168,90 @@ export default function Resume() {
             </div>
 
             {/* Right Column */}
-            <div className="col-span-8 px-8 pt-6 pb-10">
+            <div className="md:col-span-8 px-4 md:px-8 pt-6 pb-6 md:pb-10">
               <SectionTitle>PROFILE</SectionTitle>
               <p className="text-[12px] leading-relaxed">
-                Detail-oriented and solutions-driven Computer Science &
-                Engineering graduate (B.Tech, 2025) with strong expertise in
-                frontend web development and modern frameworks. Proficient in
-                JavaScript, React.js, Node.js, Express.js, with a solid
-                foundation in data structures, algorithms, and object-oriented
-                programming. Experienced in building responsive and scalable web
-                applications. Known for strong problem-solving abilities,
-                collaboration in team projects, and a passion for writing clean,
-                maintainable code. Seeking to contribute technical skills and
-                creativity in a dynamic software development role.
+                Detail-oriented and solutions-driven Computer Science & Engineering graduate (B.Tech, 2025) with strong expertise in frontend web development and modern frameworks. Proficient in JavaScript, React.js, Node.js, Express.js,  with a solid foundation in data structures, algorithms, and object-oriented programming. Experienced in building responsive and scalable web applications. Known for strong problem-solving abilities, collaboration in team projects, and a passion for writing clean, maintainable code. Seeking to contribute technical skills and creativity in a dynamic software development role.
               </p>
 
               <SectionTitle>EDUCATION</SectionTitle>
-              <div className="flex items-start justify-between">
-                <div className="font-semibold text-[13px]">
-                  Elite Co-ed(H.S.)
+              <div className="space-y-4">
+                <div>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div className="font-semibold text-[13px]">
+                      Elite Co-ed(H.S.)
+                    </div>
+                    <div className="text-[12px] text-gray-600">
+                      Jun 2017 - May 2018
+                    </div>
+                  </div>
+                  <ul className="space-y-1 mt-1">
+                    <li className="text-[12px]">Science(Computer)</li>
+                    <li className="text-[12px]">Percentage - 67.2</li>
+                  </ul>
                 </div>
-                <div className="text-[12px] text-gray-600">
-                  Jun 2017 - May 2018
+
+                <div>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div className="font-semibold text-[13px]">
+                      West Bengal Survey Institute
+                    </div>
+                    <div className="text-[12px] text-gray-600">
+                      Jul 2018 - Sept 2020
+                    </div>
+                  </div>
+                  <ul className="space-y-1 mt-1">
+                    <li className="text-[12px]">Diploma In Survey Engineering</li>
+                    <li className="text-[12px]">Percentage - 81.7</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div className="font-semibold text-[13px]">
+                      Techno International Newtown
+                    </div>
+                    <div className="text-[12px] text-gray-600">
+                      Aug 2022 - Jun 2025
+                    </div>
+                  </div>
+                  <ul className="space-y-1 mt-1">
+                    <li className="text-[12px]">
+                      B.Tech In Computer Science & Engineering
+                    </li>
+                    <li className="text-[12px]">Percentage - 75.7</li>
+                  </ul>
                 </div>
               </div>
-              <ul className="space-y-1 mt-1">
-                <li className="text-[12px]">Science(Computer)</li>
-                <li className="text-[12px]">Percentage - 67.2</li>
-              </ul> <br />
-              <div className="flex items-start justify-between">
-                <div className="font-semibold text-[13px]">
-                  West Bengal Survey Institute
-                </div>
-                <div className="text-[12px] text-gray-600">
-                    Jul 2018 - Sept 2020                
-                </div>
-              </div>
-              <ul className="space-y-1 mt-1">
-                <li className="text-[12px]">Diploma In Survey Engineering</li>
-                <li className="text-[12px]">Percentage - 81.7</li>
-              </ul> <br />
-              <div className="flex items-start justify-between">
-                <div className="font-semibold text-[13px]">
-                  Techno International Newtown
-                </div>
-                <div className="text-[12px] text-gray-600">
-                  Aug 2022 - Jun 2025
-                </div>
-              </div>
-              <ul className="space-y-1 mt-1">
-                <li className="text-[12px]">B.Tech In Computer Science & Engineering</li>
-                <li className="text-[12px]">Percentage - 75.7</li>
-              </ul> <br />
-            
-             
+
               <SectionTitle>PROJECTS</SectionTitle>
               <ul className="space-y-2">
                 <Bullet>
-                  BEYONDMEET - An interactive 3D meeting platform.
-                  <br />
-                  Tech Stack : 
-                  <li>
-                    <li>NextJs : To accomplish frontend and backend in a single path.</li>
-                    <li>Clerk : For the built in Sign in page with authectication</li>
-                    <li>
-                        Steam : For effecient Video/Audio features.
-                    </li>
-                    <li>
-                        Three Js : For creating the 3D characters 
-                    </li>
-                  </li>
+                  BEYONDMEET - An interactive 3D meeting platform. <br />
+                  <span className="block mt-1">Tech Stack :</span>
+                  <ul className="list-disc list-inside text-[11px] md:text-[12px] pl-2">
+                    <li>NextJs</li>
+                    <li>Clerk</li>
+                    <li>Steam</li>
+                    <li>Three Js</li>
+                  </ul>
                 </Bullet>
               </ul>
 
               <SectionTitle>CERTIFICATION</SectionTitle>
               <ul className="space-y-2">
-                <Bullet>
-                  The Complete 2024 Web development Bootcamp – Udemy.
-                </Bullet>
-                <Bullet>
-                  T100 Days of Code : Complete Python Pro Bootcamp – Udemy.
-                </Bullet>
-                <Bullet>
-                  Learn CSS - For Beginners – Udemy.
-                </Bullet>
-                <Bullet>
-                  Learn JavaScript - For Beginners – Udemy.
-                </Bullet>
-                <Bullet>
-                  LPhotography Masterclass: Complete Guide to photography – Udemy.
-                </Bullet>
+                <Bullet>The Complete 2024 Web development Bootcamp – Udemy.</Bullet>
+                <Bullet>100 Days of Code : Complete Python Pro Bootcamp – Udemy.</Bullet>
+                <Bullet>Learn CSS - For Beginners – Udemy.</Bullet>
+                <Bullet>Learn JavaScript - For Beginners – Udemy.</Bullet>
+                <Bullet>Photography Masterclass – Udemy.</Bullet>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <p className="max-w-4xl mx-auto text-[12px] text-gray-500 mt-4 px-3 md:px-0">
+      <p className="max-w-4xl mx-auto text-[11px] md:text-[12px] text-gray-500 mt-4 px-3 md:px-0 text-center md:text-left">
         Tip: Click the Download button above to save as a high-quality A4 PDF.
       </p>
     </div>
