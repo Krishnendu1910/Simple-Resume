@@ -247,18 +247,19 @@ export default function Resume() {
                 <div>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div className="font-semibold text-[13px]">
-                      Elite Co-ed(H.S.)
+                      Techno International Newtown
                     </div>
                     <div className="text-[12px] text-gray-600">
-                      Jun 2017 - May 2018
+                      Aug 2022 - Jun 2025
                     </div>
                   </div>
                   <ul className="space-y-1 mt-1">
-                    <li className="text-[12px]">Science(Computer)</li>
-                    <li className="text-[12px]">Percentage - 67.2</li>
+                    <li className="text-[12px]">
+                      B.Tech In Computer Science & Engineering
+                    </li>
+                    <li className="text-[12px]">Percentage - 75.7</li>
                   </ul>
                 </div>
-
                 <div>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div className="font-semibold text-[13px]">
@@ -273,23 +274,21 @@ export default function Resume() {
                     <li className="text-[12px]">Percentage - 81.7</li>
                   </ul>
                 </div>
-
                 <div>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div className="font-semibold text-[13px]">
-                      Techno International Newtown
+                      Elite Co-ed(H.S.)
                     </div>
                     <div className="text-[12px] text-gray-600">
-                      Aug 2022 - Jun 2025
+                      Jun 2017 - May 2018
                     </div>
                   </div>
                   <ul className="space-y-1 mt-1">
-                    <li className="text-[12px]">
-                      B.Tech In Computer Science & Engineering
-                    </li>
-                    <li className="text-[12px]">Percentage - 75.7</li>
+                    <li className="text-[12px]">Science(Computer)</li>
+                    <li className="text-[12px]">Percentage - 67.2</li>
                   </ul>
                 </div>
+                
               </div>
 
               <SectionTitle>PROJECTS</SectionTitle>
