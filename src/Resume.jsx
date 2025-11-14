@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Phone, Mail, MapPin, Linkedin, Github } from "lucide-react";
+import { Phone, Mail, MapPin, Globe } from "lucide-react";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
@@ -143,7 +143,7 @@ export default function Resume() {
                       KRISHNENDU SARKAR
                     </div>
                     <div className="uppercase tracking-widest text-gray-600 text-xs md:text-sm font-semibold mt-1 text-center md:text-left">
-                      BACKEND DEVELOPER 
+                      FRESHER
                     </div>
                   </div>
                 </div>
@@ -182,7 +182,7 @@ export default function Resume() {
                   </span>
                 </div>
                 <div className="flex items-start gap-2 break-all">
-                  <Linkedin size={14} className="mt-0.5 text-gray-700" />
+                  <Globe size={14} className="mt-0.5 text-gray-700" />
                   <a
                     href="https://www.linkedin.com/in/krishnendu-sarkar-087bba257/"
                     className="hover:underline text-gray-800"
@@ -191,7 +191,7 @@ export default function Resume() {
                   </a>
                 </div>
                 <div className="flex items-start gap-2 break-all">
-                  <Github size={14} className="mt-0.5 text-gray-700" />
+                  <Globe size={14} className="mt-0.5 text-gray-700" />
                   <a
                     href="https://github.com/Krishnendu1910"
                     className="hover:underline text-gray-800"
@@ -204,17 +204,15 @@ export default function Resume() {
               <SectionTitle>SKILLS</SectionTitle>
               <ul className="space-y-2">
                 <Bullet>Data Structures and Algorithm</Bullet>
-                <Bullet>C++</Bullet>
                 <Bullet>HTML5 & CSS</Bullet>
                 <Bullet>JAVASCRIPT</Bullet>
                 <Bullet>REACT JS</Bullet>
-                <Bullet>NODE JS</Bullet>
-                <Bullet>EXPRESS JS</Bullet>
-                <Bullet>NEXT JS</Bullet>
-                <Bullet>MONGODB</Bullet>
-                <Bullet>POSTMAN</Bullet>
-                <Bullet>GIT/GITHUB</Bullet>
+                <Bullet>C++</Bullet>
+                <Bullet>UI/UX DESIGN</Bullet>
               </ul>
+
+              <SectionTitle>TOOLS</SectionTitle>
+              <p className="text-[12px]">FIGMA | SPLINE | VS CODE</p>
 
               <SectionTitle>LANGUAGES</SectionTitle>
               <ul className="space-y-2">
@@ -240,7 +238,7 @@ export default function Resume() {
             <div className="md:col-span-8 px-4 md:px-8 pt-6 pb-6 md:pb-10">
               <SectionTitle>PROFILE</SectionTitle>
               <p className="text-[12px] leading-relaxed text-gray-800">
-                Detail-oriented and solutions-driven Computer Science & Engineering graduate (B.Tech, 2025) with strong expertise in web development and modern frameworks. Proficient in Backend Development viz. JavaScript, Node.js, Express.js,  with a solid foundation in data structures, algorithms, and object-oriented programming. Experienced in building responsive and scalable web applications. Known for strong problem-solving abilities, collaboration in team projects, and a passion for writing clean, maintainable code. Seeking to contribute technical skills and creativity in a dynamic software development role.
+                Detail-oriented and solutions-driven Computer Science & Engineering graduate (B.Tech, 2025) with strong expertise in web development and modern frameworks. Proficient in JavaScript, React.js, Node.js, Express.js,  with a solid foundation in data structures, algorithms, and object-oriented programming. Experienced in building responsive and scalable web applications. Known for strong problem-solving abilities, collaboration in team projects, and a passion for writing clean, maintainable code. Seeking to contribute technical skills and creativity in a dynamic software development role.
               </p>
 
               <SectionTitle>EDUCATION</SectionTitle>
@@ -299,37 +297,37 @@ export default function Resume() {
                   BEYONDMEET - An interactive 3D meeting platform. <br />
                   <span className="block mt-1">Tech Stack :</span>
                   <ul className="list-disc list-inside text-[11px] md:text-[12px] pl-2">
-                    <li>NextJs - Used for SSR,API routes ,static site generations</li>
-                    <li>Clerk - Used for secure Authentication,authorization & session management.</li>
-                    <li>Steam - Used for real time audio, video & chat features. </li>
-                    <li>Three Js - Used to render immersive 3D environments & characters.</li>
+                    <li>NextJs</li>
+                    <li>Clerk</li>
+                    <li>Steam</li>
+                    <li>Three Js</li>
                   </ul>
                 </Bullet>
                 <Bullet>
-                  University Library Management System - An interactive online library system  <br />
+                  University Library Management System - Full Stack  <br />
                   <span className="block mt-1">Tech Stack :</span>
                   <ul className="list-disc list-inside text-[11px] md:text-[12px] pl-2">
-                    <li>PostgreSQL - Primary relational database for storing & managing library data securely.</li>
+                    <li>NextJs - Used for SSR,API routes ,static site generations.</li>
+                    <li>PostgreSQL - Open source RDBMS for extensibility & SQL compilance.</li>
                     <li>Upstash - Serverless Data platform for low-latency and high scalability.</li>
                     <li>ImageKit - Provides images & videos with one real time API.</li>
-                    <li>NextJs - Used for SSR,API routes ,static site generations.</li>
-                    <li>Typescript - Used to add strong typing for safer & error-free code.</li>
+                    <li>Typescript - Extends Javascript by adding types to language.</li>
                     <li>Resend - Transform email for developers.</li>
-                    <li>Tailwind CSS - to design fast, responsive & consistent UI.</li>
+                    <li>Tailwind CSS - Utility first CSS framework for modern websites.</li>
                   </ul>
                 </Bullet>
                 <Bullet>
-                  Learning Management System - Take your learning to next level. <br />
+                  SaaS App - Full Stack <br />
                   <span className="block mt-1">Tech Stack :</span>
                   <ul className="list-disc list-inside text-[11px] md:text-[12px] pl-2">
-                    <li>Clerk - Used for enrollment management & secure access control.</li>
-                    <li>Sentry - Automatically detects & notifies critical performance issues.</li>
-                    <li>Shadcn/Ui - Used to build clean,modern & accessible ready-made components.</li>
                     <li>NextJs - Used for SSR,API routes ,static site generations.</li>
-                    <li>Supabase - Used as the backend DB & storage system with real time capabilities.</li>
+                    <li>Clerk - Authentication & User Management to application.</li>
+                    <li>Sentry - Automatically detects & notifies critical performance issues.</li>
+                    <li>Shadcn/Ui - Beautifully designed, accessible components platform.</li>
+                    <li>Supabase - Postgres Development platform.</li>
                     <li>Tailwind CSS - Utility first CSS framework for modern websites.</li>
-                    <li>Vapi - Used to deploy AI voice / chat features.</li>
-                    <li>Zod - used to validate API inputs & form data to ensure type-safe, error-free logic.</li>
+                    <li>Vapi - Build, test & deploy voice AI agents.</li>
+                    <li>Zod - Typescript first validation library.</li>
                   </ul>
                 </Bullet>
               </ul>
